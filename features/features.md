@@ -54,4 +54,9 @@
 
 Диаграммы: diagrams/feature-3/ (BPMN AS-IS/TO-BE, Sequence, C4 context/container).
 
+
+Задействованные таблицы: bonus_accruals (статусы, approved_by), periods, audit_log.
+
+Диаграммы: diagrams/feature-3/ (BPMN AS-IS/TO-BE, Sequence, C4 context/container).
+
 **Диаграммы:** `diagrams/feature-3/` (BPMN AS-IS/TO-BE, Sequence, C4 context/container).
