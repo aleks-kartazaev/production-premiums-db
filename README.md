@@ -22,8 +22,8 @@
 
 ## Архитектура (C4)
 
-- [C4 Context (Level 1)](diagrams/c4-context.md)
-- [C4 Container (Level 2)](diagrams/c4-container.md)
+- [C4 Context (Level 1)](diagramsc4-context.md)
+- [C4 Container (Level 2)](diagramsc4-container.md)
 
 ## Стек
 
