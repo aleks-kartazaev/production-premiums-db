@@ -13,6 +13,17 @@
 - `ERD_sql.png` — ER-диаграмма из DBeaver (SQL-версия).
 - `ERD_dbml.png` — ER-диаграмма из dbdiagram.io (DBML-версия).
 - `features/features.md` — описание трёх фич (учёт выработки, расчёт премий, утверждение).
+- `sql-analysis/queries.sql` — SQL-запросы для анализа данных (контроль выработки, сводная таблица, аудит).
+- `diagrams/feature-1/feature-1-bpmn-accounting.png` — BPMN AS-IS/TO-BE для фичи 1 (учёт выработки).
+- `diagrams/feature-2/feature-2-bpmn-calculation.png` — BPMN AS-IS/TO-BE для фичи 2 (расчёт премий).
+- `diagrams/feature-3/feature-3-bpmn-approval.png` — BPMN AS-IS/TO-BE для фичи 3 (утверждение премий).
+- `diagrams/c4-context.md` — C4 Context (Level 1): кто пользуется системой и с чем она связана.
+- `diagrams/c4-container.md` — C4 Container (Level 2): из чего состоит система внутри.
+
+## Архитектура (C4)
+
+- [C4 Context (Level 1)](diagrams/c4-context.md)
+- [C4 Container (Level 2)](diagrams/c4-container.md)
 
 ## Стек
 
