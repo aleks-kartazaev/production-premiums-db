@@ -1,0 +1,15 @@
+@startuml
+autonumber
+actor Мастер
+participant "Frontend" as FE
+participant "Backend" as BE
+database "БД" as DB
+
+Мастер -> FE: Открывает экран «Учёт выработки»
+FE -> BE: GET /api/employees/productivity?month=YYYY-MM
+BE -> DB: Запрос к productivity, employees, items, norms
+DB --> BE: Возвращает данные
+BE -> BE: Рассчитывает ratio, формирует сводную таблицу
+BE --> FE: JSON-ответ
+FE --> Мастер: Отображает таблицу
+@enduml
