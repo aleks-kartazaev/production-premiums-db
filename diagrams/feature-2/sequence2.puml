@@ -1,0 +1,15 @@
+@startuml
+autonumber
+actor "Начальник участка" as Manager
+participant "Frontend" as FE
+participant "Backend" as BE
+database "БД" as DB
+
+Manager -> FE: Открывает экран «Расчёт премий»
+FE -> BE: GET /api/premiums/calculate?month=YYYY-MM
+BE -> DB: Запрос к productivity, bonus_coefficients, employees
+DB --> BE: Возвращает данные
+BE -> BE: Сопоставляет ratio с диапазоном коэффициента,\nсчитает bonus_percent и bonus_amount
+BE --> FE: JSON-ответ с расчётом
+FE --> Manager: Отображает финальную таблицу
+@enduml
