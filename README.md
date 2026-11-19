@@ -17,6 +17,10 @@
 - `diagrams/feature-1/feature-1-bpmn-accounting.png` — BPMN AS-IS/TO-BE для фичи 1 (учёт выработки).
 - `diagrams/feature-2/feature-2-bpmn-calculation.png` — BPMN AS-IS/TO-BE для фичи 2 (расчёт премий).
 - `diagrams/feature-3/feature-3-bpmn-approval.png` — BPMN AS-IS/TO-BE для фичи 3 (утверждение премий).
+- `diagrams/sequence1.png` — Sequence-диаграмма (UML) для фичи 1.
+- `diagrams/sequence1.puml` — исходный код Sequence-диаграммы для фичи 1.
+- `diagrams/sequence2.png` — Sequence-диаграмма (UML) для фичи 2.
+- `diagrams/sequence2.puml` — исходный код Sequence-диаграммы для фичи 2.
 - `diagrams/c4-context.md` — C4 Context (Level 1): кто пользуется системой и с чем она связана.
 - `diagrams/c4-container.md` — C4 Container (Level 2): из чего состоит система внутри.
 
@@ -31,6 +35,7 @@
 - **SQL (DDL, DML)** — создание структуры и работа с данными.
 - **DBeaver** — инструмент для работы с базой (создание таблиц, выполнение скриптов, экспорт ERD).
 - **DBML** — язык описания схемы для быстрой визуализации в dbdiagram.io.
+- **PlantUML** — текстовое описание Sequence-диаграмм.
 
 ## Схема базы данных
 
@@ -50,6 +55,23 @@
 ### Представление
 
 - `v_productivity_summary` — сводная выгрузка: сотрудник, изделие, норма, факт, соотношение, премия.
+
+## Sequence-диаграммы (UML)
+
+Основные сценарии для каждой фичи:
+
+- [Sequence для фичи 1 (учёт выработки)](diagrams/sequence1.png)
+- [Sequence для фичи 2 (расчёт премий)](diagrams/sequence2.png)
+
+## SQL-анализ данных
+
+Примеры запросов — в файле [`sql-analysis/queries.sql`](sql-analysis/queries.sql).
+
+1. Ежедневный контроль выработки: агрегация по сотруднику и месяцу, выявление отставаний.
+2. Сводная таблица для мастера: JOIN `employees + productivity + items + norms` с расчётом `ratio`.
+3. Выгрузка для отчёта: SQL-view `v_productivity_summary`, используется для экспорта и показа сотрудникам.
+4. Сотрудники с отставанием (ratio < 1) за месяц.
+5. История изменений по сотруднику (для аудита).
 
 ## SQL и DBML: зачем оба
 
@@ -75,3 +97,6 @@ SQL — для работы, DBML — для проектирования и к�
 - Журнал аудита и блокировка периодов.
 - Написание DDL-скриптов и работа в DBeaver.
 - Визуализация схемы через DBML и ER-диаграмму.
+- Построение BPMN AS-IS/TO-BE и Sequence-диаграмм (UML).
+- Работа с C4-моделью (Context и Container).
+- Написание SQL-запросов для анализа данных.
