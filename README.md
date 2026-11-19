@@ -60,8 +60,8 @@
 
 Основные сценарии для каждой фичи:
 
-- [Sequence для фичи 1 (учёт выработки)](diagrams/sequence1.png)
-- [Sequence для фичи 2 (расчёт премий)](diagrams/sequence2.png)
+- [Sequence для фичи 1 (учёт выработки)](diagrams/feature-1/sequence1.png)
+- [Sequence для фичи 2 (расчёт премий)](diagrams/feature-2/sequence2.png)
 
 ## SQL-анализ данных
 
